@@ -16,3 +16,6 @@ html {
   margin-right: auto;
   border-radius: 5px;
 }
+.title {
+  font-size: 3rem;
+}
