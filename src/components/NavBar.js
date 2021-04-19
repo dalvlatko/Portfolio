@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 export default function NavBar() {
   return (
     <header className="bg-blue-100">
-      <div className="container">
-        <nav className="flex justify-center">
+      <div className="flex justify-center">
+        <nav>
           <NavLink
             to="/"
             exact
             activeClassName="text-white"
-            className="title inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
+            className="inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
           >
-            Vlatko
+            Home
           </NavLink>
           <NavLink
             to="/project"
