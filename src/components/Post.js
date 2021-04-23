@@ -22,7 +22,8 @@ export default function Post() {
       )
       .then((data) => setPost(data))
       .catch(console.error);
-  });
+    console.log("sanity data fetched");
+  }, []);
 
   return (
     <main className="min-h-screen p-12">
