@@ -39,16 +39,20 @@ export default function NavBar() {
         </nav>
         <div>
           <SocialIcon
-            url="instagram.com/dalvlatko"
+            url="https://instagram.com/dalvlatko"
             className=""
             target="_blank"
           />
           <SocialIcon
-            url="twitter.com/dalvlatko"
+            url="https://twitter.com/dalvlatko"
             className=""
             target="_blank"
           />
-          <SocialIcon url="github.com/dalvlatko" className="" target="_blank" />
+          <SocialIcon
+            url="https://github.com/dalvlatko"
+            className=""
+            target="_blank"
+          />
         </div>
       </div>
     </header>
