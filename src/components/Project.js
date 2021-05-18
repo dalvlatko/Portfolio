@@ -27,7 +27,10 @@ export default function Project() {
         <section>
           {projectData &&
             projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl p-16 m-10">
+              <article
+                className="relative rounded-lg shadow-xl p-16 m-10"
+                key={index}
+              >
                 <h3 className="inline-block text-gray-800 text-3xl font-bold mb-2 hover:text-red-400">
                   <a href={project.link} alt={project.title}>
                     {project.title}
