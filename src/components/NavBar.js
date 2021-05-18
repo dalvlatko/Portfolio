@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 
 export default function NavBar() {
   return (
-    <header className="bg-blue-100">
+    <header className="bg-gray-600">
       <div className="flex justify-center">
         <nav>
           <NavLink
@@ -29,6 +30,11 @@ export default function NavBar() {
             About Me
           </NavLink>
         </nav>
+        <div>
+          <SocialIcon url="instagram.com/dalvlatko" className="" />
+          <SocialIcon url="twitter.com/dalvlatko" className="" />
+          <SocialIcon url="github.com/dalvlatko" className="" />
+        </div>
       </div>
     </header>
   );
