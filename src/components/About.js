@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
+import Loading from "./Loading.js";
 
 export default function About() {
   const [aboutData, setAboutData] = useState(null);
@@ -17,7 +18,7 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!aboutData) return <div>Loading...</div>;
+  if (!aboutData) return <Loading />
 
   return (
     <section className="pt-12 pb-12 px-8">
