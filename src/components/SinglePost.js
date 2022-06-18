@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
+import Loading from "./Loading.js";
 
 export default function SingePost() {
   const [singlePost, setSinglePost] = useState(null);
@@ -29,7 +30,7 @@ export default function SingePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <div>Loading...</div>;
+  if (!singlePost) return <Loading />
 
   return (
     <main className="bg-gray-200 min-h-screen p-12">
