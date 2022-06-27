@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import cartagena from "../images/cartagena.jpg";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
@@ -11,6 +12,7 @@ export default function Post() {
         `*[_type == "post"]{
           title,
           slug,
+          publishedAt,
           mainImage{
             asset->{
               _id,
@@ -42,13 +44,23 @@ export default function Post() {
                     key={index}
                   >
                     <img
-                      src={post.mainImage.asset.url}
-                      alt={post.mainImage.alt}
+                      src={
+                        post.mainImage.asset.url === undefined
+                          ? cartagena
+                          : post.mainImage.asset.url
+                      }
+                      alt={
+                        post.mainImage.alt === undefined
+                          ? "Cartagena, Colombia"
+                          : post.mainImage.alt
+                      }
                       className="w-full h-full rounded-r object-over absolute"
                     />
                     <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
                       <h3 className="text-lg font-bold px-3 py-4 bg-opacity-75">
-                        {post.title}
+                        {post.title === undefined
+                          ? post.publishedAt + " Blog"
+                          : post.title}
                       </h3>
                     </span>
                   </span>

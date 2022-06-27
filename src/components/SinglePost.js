@@ -30,7 +30,7 @@ export default function SingePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <Loading />
+  if (!singlePost) return <Loading />;
 
   return (
     <main className="bg-gray-200 min-h-screen p-12">
@@ -38,7 +38,7 @@ export default function SingePost() {
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="text-3xl lg:text-6xl mb-4">{singlePost.tile}</h1>
+              <h1 className="text-3xl lg:text-6xl mb-4">{singlePost.title}</h1>
               <div className="flex justify-center text-gray-800">
                 <img
                   src={singlePost.authorImage.asset.url}
