@@ -18,19 +18,14 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!aboutData) return <Loading />
+  if (!aboutData) return <Loading />;
 
   return (
     <section className="pt-12 pb-12 px-8">
-        <h1 className="flex justify-center text-6xl text-black font-bold leading-none lg:leading-snug home-name">
-          {aboutData.name}
-        </h1>
-        <h2 className="flex justify-center">
-          This is the about section
-        </h2>
-        <p>
-          {aboutData.bio}
-        </p>
+      <h1 className="flex justify-center text-5xl text-black font-bold leading-none lg:leading-snug home-name">
+        About Me
+      </h1>
+      <p>{aboutData.bio}</p>
     </section>
-  )
+  );
 }
