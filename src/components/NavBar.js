@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
 
 export default function NavBar() {
   return (
@@ -37,23 +36,6 @@ export default function NavBar() {
             About Me
           </NavLink>
         </nav>
-        <div>
-          <SocialIcon
-            url="https://instagram.com/dalvlatko"
-            className=""
-            target="_blank"
-          />
-          <SocialIcon
-            url="https://twitter.com/dalvlatko"
-            className=""
-            target="_blank"
-          />
-          <SocialIcon
-            url="https://github.com/dalvlatko"
-            className=""
-            target="_blank"
-          />
-        </div>
       </div>
     </header>
   );
