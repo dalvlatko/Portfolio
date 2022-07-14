@@ -27,6 +27,8 @@ export default function Post() {
     console.log("sanity data fetched");
   }, []);
 
+  let numThumbnails = 2;
+
   return (
     <main className="p-12">
       <section className="container mx-auto">
@@ -36,7 +38,7 @@ export default function Post() {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData &&
-            postData.map((post, index) => (
+            postData.slice(0, numThumbnails).map((post, index) => (
               <article>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
