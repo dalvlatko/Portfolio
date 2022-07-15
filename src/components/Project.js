@@ -38,7 +38,10 @@ export default function Project() {
                 </h3>
                 {project.tags &&
                   project.tags.map((tag) => (
-                    <span className="text-xs rounded-full py-3 px-6 bg-blue-500 m-1">
+                    <span
+                      key={tag}
+                      className="text-xs rounded-full py-3 px-6 bg-blue-500 m-1"
+                    >
                       {tag}
                     </span>
                   ))}

@@ -39,7 +39,7 @@ export default function Post() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData &&
             postData.slice(0, numThumbnails).map((post, index) => (
-              <article>
+              <article key={index}>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
                     className="block h-64 relative rounded shadow leading-snug border-l-8 border-blue-600"
