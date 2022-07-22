@@ -36,7 +36,7 @@ export default function Post() {
         <h2 className="text-lg flex justify-center mb-12">
           My thoughts on everything
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {postData &&
             postData.slice(0, numThumbnails).map((post, index) => (
               <article key={index}>

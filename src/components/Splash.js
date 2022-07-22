@@ -23,6 +23,11 @@ export default function Splash() {
           className="m-3"
           target="_blank"
         />
+        <SocialIcon
+          url="mailto:vladimir.icovski@gmail.com"
+          className="m-3"
+          target="_blank"
+        />
       </div>
     </section>
   );
