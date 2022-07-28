@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
+import BlockContent from "@sanity/block-content-to-react";
 import Loading from "./Loading.js";
 
 export default function About() {
@@ -25,7 +26,13 @@ export default function About() {
       <h1 className="flex justify-center text-5xl text-black font-bold leading-none lg:leading-snug home-name">
         About Me
       </h1>
-      <p>{aboutData.bio}</p>
+      <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <BlockContent
+          blocks={aboutData.bio}
+          projectId="1i41jkhj"
+          dataset="production"
+        />
+      </div>
     </section>
   );
 }
