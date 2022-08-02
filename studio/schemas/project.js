@@ -21,6 +21,10 @@ export default {
       type: "url",
     },
     {
+      name: "github",
+      type: "url",
+    },
+    {
       name: "blog_post",
       type: "url",
     },

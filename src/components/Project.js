@@ -11,6 +11,7 @@ export default function Project() {
         date,
         description,
         live_site,
+        github,
         blog_post,
         tags
       }`
@@ -18,6 +19,9 @@ export default function Project() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
+
+  console.table(projectData);
+
   return (
     <main>
       <section>
@@ -54,22 +58,36 @@ export default function Project() {
                   <p className="my-6 text-lg text-gray-700 leading-relaxed">
                     {project.description}
                   </p>
-                  <a
-                    href={project.live_site}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="text-red-500 font-bold hover:underline hover:text-red-400"
-                  >
-                    <span>Live Site</span>
-                  </a>
-                  <a
-                    href={project.live_site}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="text-red-500 font-bold hover:underline hover:text-red-400"
-                  >
-                    <span>Case Study</span>
-                  </a>
+                  {project.live_site && (
+                    <a
+                      href={project.live_site}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                    >
+                      <span>Live Site</span>
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                    >
+                      <span>Github</span>
+                    </a>
+                  )}
+                  {project.blog_post && (
+                    <a
+                      href={project.blog_post}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                    >
+                      <span>Case Study</span>
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
