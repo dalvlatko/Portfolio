@@ -10,7 +10,8 @@ export default function Project() {
         title,
         date,
         description,
-        link,
+        live_site,
+        blog_post,
         tags
       }`
       )
@@ -54,12 +55,20 @@ export default function Project() {
                     {project.description}
                   </p>
                   <a
-                    href={project.link}
+                    href={project.live_site}
                     rel="noopener noreferrer"
                     target="_blank"
                     className="text-red-500 font-bold hover:underline hover:text-red-400"
                   >
                     <span>Live Site</span>
+                  </a>
+                  <a
+                    href={project.live_site}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="text-red-500 font-bold hover:underline hover:text-red-400"
+                  >
+                    <span>Case Study</span>
                   </a>
                 </div>
               </article>

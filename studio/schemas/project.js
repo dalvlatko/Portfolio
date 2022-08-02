@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   name: "project",
   title: "Project",
@@ -16,7 +17,11 @@ export default {
       type: "text",
     },
     {
-      name: "link",
+      name: "live_site",
+      type: "url",
+    },
+    {
+      name: "blog_post",
       type: "url",
     },
     {
