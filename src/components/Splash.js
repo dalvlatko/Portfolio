@@ -1,6 +1,6 @@
 import React from "react";
-import { SocialIcon } from "react-social-icons";
 import NavBar from "../components/NavBar";
+import Socials from "../components/Socials";
 
 export default function Splash() {
   return (
@@ -16,32 +16,7 @@ export default function Splash() {
         <h2 className="p-2 text-2xl text-white">Web Developer</h2>
         <h2 className="p-2 text-2xl text-white">Chemist</h2>
       </div>
-      <div className="mt-auto mb-10">
-        <SocialIcon
-          url="https://instagram.com/dalvlatko"
-          className="m-3"
-          target="_blank"
-          fgColor="white"
-        />
-        <SocialIcon
-          url="https://github.com/dalvlatko"
-          className="m-3"
-          target="_blank"
-          fgColor="white"
-        />
-        <SocialIcon
-          url="https://linkedin.com/in/vladimir-icovski"
-          className="m-3"
-          target="_blank"
-          fgColor="white"
-        />
-        <SocialIcon
-          url="mailto:vladimir.icovski@gmail.com"
-          className="m-3"
-          target="_blank"
-          fgColor="white"
-        />
-      </div>
+      <Socials />
     </section>
   );
 }
