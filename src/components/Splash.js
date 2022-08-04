@@ -16,7 +16,9 @@ export default function Splash() {
         <h2 className="p-2 text-2xl text-white">Web Developer</h2>
         <h2 className="p-2 text-2xl text-white">Chemist</h2>
       </div>
-      <Socials />
+      <div className="mt-auto mb-10">
+        <Socials />
+      </div>
     </section>
   );
 }

@@ -10,7 +10,7 @@ let socialLinks = [
 
 export default function Socials() {
   return (
-    <div className="mt-auto mb-10">
+    <div>
       {socialLinks.map((link) => (
         <SocialIcon
           url={link}
