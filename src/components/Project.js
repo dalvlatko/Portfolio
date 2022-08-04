@@ -37,7 +37,7 @@ export default function Project() {
                 key={index}
               >
                 <h3 className="inline-block text-gray-800 text-3xl font-bold mb-2 hover:text-red-400">
-                  <a href={project.link} alt={project.title}>
+                  <a href={project.live_site} alt={project.title}>
                     {project.title}
                   </a>
                 </h3>
