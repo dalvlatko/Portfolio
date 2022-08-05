@@ -9,28 +9,28 @@ export default function NavBar() {
           to="/"
           exact
           activeClassName="text-white"
-          className="inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
+          className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           Home
         </NavLink>
         <NavLink
           to="/about"
           activeClassName="text-white"
-          className="inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
+          className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           About
         </NavLink>
         <NavLink
           to="/project"
           activeClassName="text-white"
-          className="inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
+          className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           Projects
         </NavLink>
         <NavLink
           to="/post"
           activeClassName="text-white"
-          className="inline-flex items-center py-6 px-3 mr-4 hover:text-black-500 font-bold"
+          className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           Blog
         </NavLink>

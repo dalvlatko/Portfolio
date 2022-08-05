@@ -13,8 +13,8 @@ export default function Splash() {
             Vladimir Icovski
           </h1>
         </div>
-        <h2 className="p-2 text-2xl text-white">Web Developer</h2>
-        <h2 className="p-2 text-2xl text-white">Chemist</h2>
+        <h2 className="p-2 text-2xl text-white font-light">Web Developer</h2>
+        <h2 className="p-2 text-2xl text-white font-light">Chemist</h2>
       </div>
       <div className="mt-auto mb-10">
         <Socials />
