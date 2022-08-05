@@ -14,7 +14,7 @@ export default function Socials() {
       {socialLinks.map((link) => (
         <SocialIcon
           url={link}
-          className="m-3"
+          className="m-5"
           target="_blank"
           fgColor="white"
         />
