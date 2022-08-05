@@ -1,6 +1,7 @@
 @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
 * {
   padding: 0;
@@ -20,4 +21,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
+}
+.title {
+  font-family: "Poiret One", cursive;
 }

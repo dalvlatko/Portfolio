@@ -29,7 +29,7 @@ export default function About() {
   return (
     <section className="grid md:grid-cols-2 lg:grid-cols-2 lg:p-20 md:p-10 p-5 gap-8 bg-yellow-300">
       <div className="">
-        <h1 className="text-5xl text-blue-500 font-bold home-name">About Me</h1>
+        <h1 className="text-5xl text-blue-500 title">About Me</h1>
         <div className="prose lg:prose-xl">
           <BlockContent
             blocks={aboutData.bio}
