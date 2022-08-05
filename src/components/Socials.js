@@ -11,12 +11,13 @@ let socialLinks = [
 export default function Socials() {
   return (
     <div>
-      {socialLinks.map((link) => (
+      {socialLinks.map((link, index) => (
         <SocialIcon
           url={link}
           className="m-5"
           target="_blank"
           fgColor="white"
+          key={index}
         />
       ))}
     </div>
