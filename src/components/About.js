@@ -27,8 +27,8 @@ export default function About() {
   if (!aboutData) return <Loading />;
 
   return (
-    <section className="grid md:grid-cols-2 lg:grid-cols-2 lg:p-20 md:p-10 p-5 gap-8 bg-yellow-300">
-      <div className="">
+    <section className="flex flex-wrap justify-center lg:p-20 md:p-10 p-5 gap-8 bg-yellow-300">
+      <div className="max-w-md">
         <h1 className="text-5xl text-blue-500 title">About Me</h1>
         <div className="prose lg:prose-xl">
           <BlockContent
@@ -38,13 +38,13 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center max-w-md">
         <img
           src={aboutData.image.asset.url}
           alt="Vladimir Icovski eating French Fries"
           className="rounded-full w-3/4"
         />
-        <div className="flex flex-col items-center gap-5 p-10">
+        <div className="max-w-l flex flex-col items-center gap-5 p-10">
           <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2">
             View Blog
           </h2>

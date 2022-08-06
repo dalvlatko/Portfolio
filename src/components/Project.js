@@ -41,15 +41,17 @@ export default function Project() {
                     {project.title}
                   </a>
                 </h3>
-                {project.tags &&
-                  project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs rounded-full py-3 px-6 bg-blue-500 m-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap">
+                  {project.tags &&
+                    project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs rounded-full py-3 px-6 bg-blue-500 m-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                </div>
                 <div className="text-gray-500 text-xs space-x-4">
                   <span>
                     <strong className="font-bold">Finished on</strong>:{" "}
