@@ -40,5 +40,13 @@ export default {
         layout: "tags",
       },
     },
+    {
+      name: "screenshot",
+      title: "Screenshot",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 };
