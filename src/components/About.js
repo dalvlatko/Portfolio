@@ -27,8 +27,8 @@ export default function About() {
   if (!aboutData) return <Loading />;
 
   return (
-    <section className="flex flex-wrap justify-center lg:p-20 md:p-10 p-5 gap-8 bg-yellow-300">
-      <div className="max-w-md">
+    <section className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300">
+      <div className="lg:max-w-md">
         <h1 className="text-5xl text-blue-500 title">About Me</h1>
         <div className="prose lg:prose-xl">
           <BlockContent
@@ -44,7 +44,7 @@ export default function About() {
           alt="Vladimir Icovski eating French Fries"
           className="rounded-full w-3/4"
         />
-        <div className="max-w-l flex flex-col items-center gap-5 p-10">
+        <div className="flex flex-col items-center gap-5 p-10">
           <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2">
             View Blog
           </h2>

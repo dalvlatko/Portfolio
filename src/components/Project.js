@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
+import { Icon } from "@iconify/react";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -44,12 +45,10 @@ export default function Project() {
                 <div className="flex flex-wrap">
                   {project.tags &&
                     project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs rounded-full py-3 px-6 bg-blue-500 m-1"
-                      >
-                        {tag}
-                      </span>
+                      <Icon
+                        icon={`simple-icons:${tag}`}
+                        className="text-4xl my-5 mr-5"
+                      />
                     ))}
                 </div>
                 <div className="text-gray-500 text-xs space-x-4">
