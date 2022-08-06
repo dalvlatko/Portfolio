@@ -14,7 +14,13 @@ export default function Project() {
         live_site,
         github,
         blog_post,
-        tags
+        tags,
+        screenshot{
+          asset->{
+            _id,
+            url
+          },
+        },
       }`
       )
       .then((data) => setProjectData(data))
@@ -44,11 +50,15 @@ export default function Project() {
                 </h3>
                 <div className="flex flex-wrap">
                   {project.tags &&
-                    project.tags.map((tag) => (
-                      <Icon
-                        icon={`simple-icons:${tag}`}
-                        className="text-4xl my-5 mr-5"
-                      />
+                    project.tags.map((tag, index) => (
+                      <div className="flex flex-col items-center m-2">
+                        <Icon
+                          icon={`simple-icons:${tag.toLowerCase()}`}
+                          className="text-4xl"
+                          key={index}
+                        />
+                        <div className="m-2">{tag}</div>
+                      </div>
                     ))}
                 </div>
                 <div className="text-gray-500 text-xs space-x-4">
