@@ -28,7 +28,7 @@ export default function About() {
 
   return (
     <section className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300">
-      <div className="lg:max-w-md">
+      <div className="min-w-md xl:max-w-4xl">
         <h1 className="text-5xl text-blue-500 title">About Me</h1>
         <div className="prose lg:prose-xl">
           <BlockContent
