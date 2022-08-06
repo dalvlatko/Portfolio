@@ -5,6 +5,7 @@ import Loading from "./Loading.js";
 
 export default function About() {
   const [aboutData, setAboutData] = useState(null);
+  const [title, setTitle] = useState("About Me");
 
   useEffect(() => {
     sanityClient
@@ -29,7 +30,13 @@ export default function About() {
   return (
     <section className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300">
       <div className="min-w-md xl:max-w-xl">
-        <h1 className="text-5xl text-blue-500 title">About Me</h1>
+        <h1
+          className="text-5xl text-blue-500 title"
+          onMouseEnter={() => setTitle("За Мене")}
+          onMouseLeave={() => setTitle("About Me")}
+        >
+          {title}
+        </h1>
         <div className="prose lg:prose-xl">
           <BlockContent
             blocks={aboutData.bio}
