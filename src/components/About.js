@@ -38,17 +38,17 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center max-w-md">
+      <div className="flex xl:flex-col justify-center items-center max-w-md">
         <img
           src={aboutData.image.asset.url}
           alt="Vladimir Icovski eating French Fries"
-          className="rounded-full w-3/4"
+          className="rounded-full w-1/3 sm:w-2/4 xl:w-3/4"
         />
-        <div className="flex flex-col items-center gap-5 p-10">
-          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2">
+        <div className="lg:flex flex-col items-center gap-5 p-10">
+          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2 my-2">
             View Blog
           </h2>
-          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2">
+          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2 my-2">
             Contact
           </h2>
         </div>
