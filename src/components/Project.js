@@ -28,54 +28,33 @@ export default function Project() {
       .catch(console.error);
   }, []);
 
-  console.table(projectData);
-
   return (
     <main>
-      <section>
-        <h1 className="text-5xl flex justify-center">Projects</h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-          Created by Vladimir Icovski
-        </h2>
-        <section>
-          {projectData &&
-            projectData.map((project, index) => (
-              <article
-                className="relative rounded-lg shadow-xl p-16 m-10"
-                key={index}
-              >
-                <h3 className="inline-block text-gray-800 text-3xl font-bold mb-2 hover:text-red-400">
+      <section id="Projects">
+        {projectData &&
+          projectData.map((project, index) => (
+            <article
+              className="flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-blue-300"
+              key={index}
+            >
+              <div className="w-96 lg:w-2/6">
+                <h1 className="text-5xl text-blue-500 title">
                   <a href={project.live_site} alt={project.title}>
                     {project.title}
                   </a>
-                </h3>
-                <div className="flex flex-wrap">
-                  {project.tags &&
-                    project.tags.map((tag, index) => (
-                      <div
-                        className="flex flex-col items-center m-2"
-                        key={index}
-                      >
-                        <Icon
-                          icon={`simple-icons:${tag.toLowerCase()}`}
-                          className="text-4xl"
-                        />
-                        <div className="m-2">{tag}</div>
-                      </div>
-                    ))}
+                </h1>
+                <div className="my-2">
+                  <strong className="font-bold">Finished on</strong>:{" "}
+                  {new Date(project.date).toLocaleDateString()}
                 </div>
-                <div className="text-gray-500 text-xs space-x-4">
-                  <span>
-                    <strong className="font-bold">Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
-                  </span>
-                  <div className="prose lg:prose-xl my-6 text-lg text-gray-700 leading-relaxed">
-                    <BlockContent
-                      blocks={project.description}
-                      projectId="1i41jkhj"
-                      dataset="production"
-                    />
-                  </div>
+                <div className="prose my-2">
+                  <BlockContent
+                    blocks={project.description}
+                    projectId="1i41jkhj"
+                    dataset="production"
+                  />
+                </div>
+                <div className="my-2 space-x-4">
                   {project.live_site && (
                     <a
                       href={project.live_site}
@@ -107,9 +86,31 @@ export default function Project() {
                     </a>
                   )}
                 </div>
-              </article>
-            ))}
-        </section>
+                <div className="flex flex-wrap">
+                  {project.tags &&
+                    project.tags.map((tag, index) => (
+                      <div
+                        className="flex flex-col items-center py-2 mr-2"
+                        key={index}
+                      >
+                        <Icon
+                          icon={`simple-icons:${tag.toLowerCase()}`}
+                          className="text-3xl"
+                        />
+                        <div className="m-2">{tag}</div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+              <div className="w-96">
+                <img
+                  src={project.screenshot.asset.url}
+                  alt="Vladimir Icovski eating French Fries"
+                  className="border-b-8 border-l-8 border-solid border-red-400"
+                />
+              </div>
+            </article>
+          ))}
       </section>
     </main>
   );

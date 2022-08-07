@@ -13,20 +13,18 @@ export default function NavBar() {
         >
           Home
         </NavLink>
-        <NavLink
-          to="/about"
-          activeClassName="text-white"
+        <a
+          href="#About"
           className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           About
-        </NavLink>
-        <NavLink
-          to="/project"
-          activeClassName="text-white"
+        </a>
+        <a
+          href="#Projects"
           className="inline-flex items-center py-6 px-3 mr-4 hover:text-yellow-300"
         >
           Projects
-        </NavLink>
+        </a>
         <NavLink
           to="/post"
           activeClassName="text-white"

@@ -28,7 +28,10 @@ export default function About() {
   if (!aboutData) return <Loading />;
 
   return (
-    <section className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300">
+    <section
+      id="About"
+      className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300"
+    >
       <div className="min-w-md xl:max-w-xl">
         <h1
           className="text-5xl text-blue-500 title"
