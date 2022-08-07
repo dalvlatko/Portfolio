@@ -14,7 +14,7 @@ export default {
     },
     {
       name: "description",
-      type: "text",
+      type: "blockContent",
     },
     {
       name: "live_site",

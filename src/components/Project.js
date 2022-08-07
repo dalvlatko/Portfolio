@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
+import BlockContent from "@sanity/block-content-to-react";
 import { Icon } from "@iconify/react";
 
 export default function Project() {
@@ -7,7 +8,7 @@ export default function Project() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type =="project"] | order(date desc){
+        `*[_type =="project"] | order(date asc){
         title,
         date,
         description,
@@ -51,11 +52,13 @@ export default function Project() {
                 <div className="flex flex-wrap">
                   {project.tags &&
                     project.tags.map((tag, index) => (
-                      <div className="flex flex-col items-center m-2">
+                      <div
+                        className="flex flex-col items-center m-2"
+                        key={index}
+                      >
                         <Icon
                           icon={`simple-icons:${tag.toLowerCase()}`}
                           className="text-4xl"
-                          key={index}
                         />
                         <div className="m-2">{tag}</div>
                       </div>
@@ -66,9 +69,13 @@ export default function Project() {
                     <strong className="font-bold">Finished on</strong>:{" "}
                     {new Date(project.date).toLocaleDateString()}
                   </span>
-                  <p className="my-6 text-lg text-gray-700 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <div className="prose lg:prose-xl my-6 text-lg text-gray-700 leading-relaxed">
+                    <BlockContent
+                      blocks={project.description}
+                      projectId="1i41jkhj"
+                      dataset="production"
+                    />
+                  </div>
                   {project.live_site && (
                     <a
                       href={project.live_site}
