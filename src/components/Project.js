@@ -41,7 +41,7 @@ export default function Project() {
               }`}
               key={index}
             >
-              <div className="w-96 lg:w-2/6">
+              <div className="min-w-96 md:w-2/6">
                 <h1 className="inline pr-2 text-5xl text-yellow-300 title">
                   <a href={project.live_site} alt={project.title}>
                     {project.title}
@@ -59,18 +59,20 @@ export default function Project() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-10 w-96">
-                <img
-                  src={project.screenshot.asset.url}
-                  alt="Vladimir Icovski eating French Fries"
-                  className={`border-solid border-red-400 border-b-8 ${
-                    index % 2 === 0 ? "border-l-8" : "border-r-8"
-                  }`}
-                />
+                {project.screenshot && (
+                  <img
+                    src={project.screenshot.asset.url}
+                    alt="Vladimir Icovski eating French Fries"
+                    className={`border-solid border-red-400 border-b-8 ${
+                      index % 2 === 0 ? "border-l-8" : "border-r-8"
+                    }`}
+                  />
+                )}
                 <div className="flex flex-wrap">
                   {project.tags &&
                     project.tags.map((tag, index) => (
                       <div
-                        className="flex flex-col items-center py-2 mr-2"
+                        className="flex flex-col items-center my-2 mr-2"
                         key={index}
                       >
                         <Icon
@@ -99,7 +101,7 @@ export default function Project() {
                       target="_blank"
                       className="text-red-500 font-bold hover:underline hover:text-red-400"
                     >
-                      <span>Github</span>
+                      <span>GitHub</span>
                     </a>
                   )}
                   {project.blog_post && (
