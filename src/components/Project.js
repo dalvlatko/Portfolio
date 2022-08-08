@@ -27,33 +27,57 @@ export default function Project() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
-  const left =
-    "flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-gray-800";
-  const right =
-    "flex flex-wrap sm:flex-row-reverse justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-blue-400";
 
   return (
     <main>
       <section id="Projects">
         {projectData &&
           projectData.map((project, index) => (
-            <article className={index % 2 === 0 ? left : right} key={index}>
+            <article
+              className={`flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 ${
+                index % 2 === 0
+                  ? "bg-gray-800"
+                  : "sm:flex-row-reverse bg-blue-400"
+              }`}
+              key={index}
+            >
               <div className="w-96 lg:w-2/6">
-                <h1 className="text-5xl text-blue-500 title">
+                <h1 className="inline pr-2 text-5xl text-yellow-300 title">
                   <a href={project.live_site} alt={project.title}>
                     {project.title}
                   </a>
                 </h1>
-                <div className="my-2">
-                  <strong className="font-bold">Finished on</strong>:{" "}
-                  {new Date(project.date).toLocaleDateString()}
+                <div className="inline my-2 text-white">
+                  {new Date(project.date).getUTCFullYear()}
                 </div>
-                <div className="prose my-2">
+                <div className="prose my-2 text-white">
                   <BlockContent
                     blocks={project.description}
                     projectId="1i41jkhj"
                     dataset="production"
                   />
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-10 w-96">
+                <img
+                  src={project.screenshot.asset.url}
+                  alt="Vladimir Icovski eating French Fries"
+                  className={`border-b-8 border-l-8 border-solid border-red-400`}
+                />
+                <div className="flex flex-wrap">
+                  {project.tags &&
+                    project.tags.map((tag, index) => (
+                      <div
+                        className="flex flex-col items-center py-2 mr-2"
+                        key={index}
+                      >
+                        <Icon
+                          icon={`simple-icons:${tag.toLowerCase()}`}
+                          className="text-3xl text-white"
+                        />
+                        <div className="text-white m-2">{tag}</div>
+                      </div>
+                    ))}
                 </div>
                 <div className="my-2 space-x-4">
                   {project.live_site && (
@@ -87,28 +111,6 @@ export default function Project() {
                     </a>
                   )}
                 </div>
-                <div className="flex flex-wrap">
-                  {project.tags &&
-                    project.tags.map((tag, index) => (
-                      <div
-                        className="flex flex-col items-center py-2 mr-2"
-                        key={index}
-                      >
-                        <Icon
-                          icon={`simple-icons:${tag.toLowerCase()}`}
-                          className="text-3xl"
-                        />
-                        <div className="m-2">{tag}</div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-              <div className="w-96">
-                <img
-                  src={project.screenshot.asset.url}
-                  alt="Vladimir Icovski eating French Fries"
-                  className="border-b-8 border-l-8 border-solid border-red-400"
-                />
               </div>
             </article>
           ))}
