@@ -784,16 +784,20 @@ video {
   border-left-width: 8px;
 }
 
-.border-b-8 {
-  border-bottom-width: 8px;
+.border-b-\[20px\] {
+  border-bottom-width: 20px;
 }
 
-.border-r-8 {
-  border-right-width: 8px;
+.border-l-\[20px\] {
+  border-left-width: 20px;
 }
 
-.border-t-4 {
-  border-top-width: 4px;
+.border-r-\[20px\] {
+  border-right-width: 20px;
+}
+
+.border-t-\[6px\] {
+  border-top-width: 6px;
 }
 
 .border-solid {
@@ -805,7 +809,8 @@ video {
 }
 
 .border-turquoise {
-  border-color: #4ecdc4ff;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 165 154 / var(--tw-border-opacity));
 }
 
 .border-blue-600 {
@@ -813,8 +818,8 @@ video {
   border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 
-.border-bittersweet {
-  border-color: #ff6b6bff;
+.border-gunmetal {
+  border-color: #292f36ff;
 }
 
 .border-crayola {
@@ -830,7 +835,8 @@ video {
 }
 
 .bg-turquoise {
-  background-color: #4ecdc4ff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 165 154 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200 {
@@ -986,11 +992,16 @@ video {
 }
 
 .text-turquoise {
-  color: #4ecdc4ff;
+  --tw-text-opacity: 1;
+  color: rgb(0 165 154 / var(--tw-text-opacity));
 }
 
 .text-gunmetal {
   color: #292f36ff;
+}
+
+.text-mintcream {
+  color: #f7fff7ff;
 }
 
 .text-white {
@@ -1005,10 +1016,6 @@ video {
 
 .text-crayola {
   color: #ffe66dff;
-}
-
-.text-mintcream {
-  color: #f7fff7ff;
 }
 
 .text-bittersweet {
@@ -1056,14 +1063,10 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   --gunmetal: #292f36ff;
-  --medium-turquoise: #4ecdc4ff;
+  --medium-turquoise: #00a59a;
   --mint-cream: #f7fff7ff;
   --bittersweet: #ff6b6bff;
   --yellow-crayola: #ffe66dff;
-}
-
-.title {
-  font-family: "Poiret One", cursive;
 }
 
 .bg-text {
@@ -1079,9 +1082,16 @@ html {
   line-height: 1.1;
 }
 
-.hover\:text-yellow-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(253 224 71 / var(--tw-text-opacity));
+.hover\:border-4:hover {
+  border-width: 4px;
+}
+
+.hover\:border-solid:hover {
+  border-style: solid;
+}
+
+.hover\:border-crayola:hover {
+  border-color: #ffe66dff;
 }
 
 .hover\:text-crayola:hover {

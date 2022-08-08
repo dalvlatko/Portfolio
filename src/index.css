@@ -15,13 +15,10 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   --gunmetal: #292f36ff;
-  --medium-turquoise: #4ecdc4ff;
+  --medium-turquoise: #00a59a;
   --mint-cream: #f7fff7ff;
   --bittersweet: #ff6b6bff;
   --yellow-crayola: #ffe66dff;
-}
-.title {
-  font-family: "Poiret One", cursive;
 }
 .bg-text {
   z-index: 0;

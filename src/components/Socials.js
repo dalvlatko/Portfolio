@@ -14,7 +14,7 @@ export default function Socials() {
       {socialLinks.map((link, index) => (
         <SocialIcon
           url={link}
-          className="m-5"
+          className="m-5 hover:border-solid hover:border-4 rounded-full hover:border-crayola"
           target="_blank"
           fgColor="white"
           key={index}

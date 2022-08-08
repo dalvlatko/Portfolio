@@ -66,8 +66,10 @@ export default function Project() {
                   <img
                     src={project.screenshot.asset.url}
                     alt="Vladimir Icovski eating French Fries"
-                    className={`border-solid border-bittersweet border-b-8 ${
-                      index % 2 === 0 ? "border-l-8" : "border-r-8"
+                    className={`border-solid border-turquoise border-b-[20px] ${
+                      index % 2 === 0
+                        ? "border-l-[20px]"
+                        : "border-r-[20px] border-gunmetal"
                     }`}
                   />
                 )}

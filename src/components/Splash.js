@@ -9,7 +9,7 @@ export default function Splash() {
   const [chemist, setChemist] = useState("Chemist");
 
   return (
-    <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-4 border-crayola">
+    <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola">
       <NavBar />
       {/* <div data-nosnippet className="bg-text top-2 text-gray-200 opacity-10">
         владимир ицовски владимир ицовски владимир ицовски владимир ицовски

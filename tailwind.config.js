@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         gunmetal: "#292f36ff",
-        turquoise: "#4ecdc4ff",
+        turquoise: "#00A59A",
         mintcream: "#f7fff7ff",
         bittersweet: "#ff6b6bff",
         crayola: "#ffe66dff",
