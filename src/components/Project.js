@@ -36,8 +36,8 @@ export default function Project() {
             <article
               className={`relative flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 ${
                 index % 2 === 0
-                  ? "bg-gray-800"
-                  : "sm:flex-row-reverse bg-blue-400"
+                  ? "bg-gunmetal"
+                  : "sm:flex-row-reverse bg-turquoise"
               }`}
               key={index}
             >
@@ -45,15 +45,15 @@ export default function Project() {
                 ПРОЕКТ
               </div> */}
               <div className="min-w-96 md:w-2/6">
-                <h1 className="inline pr-2 text-5xl text-yellow-300 title">
+                <h1 className="inline pr-2 text-5xl text-crayola font-sans">
                   <a href={project.live_site} alt={project.title}>
                     {project.title}
                   </a>
                 </h1>
-                <div className="inline my-2 text-white">
+                <div className="inline my-2 text-mintcream">
                   {new Date(project.date).getUTCFullYear()}
                 </div>
-                <div className="prose my-2 text-white">
+                <div className="prose my-2 text-mintcream">
                   <BlockContent
                     blocks={project.description}
                     projectId="1i41jkhj"
@@ -66,7 +66,7 @@ export default function Project() {
                   <img
                     src={project.screenshot.asset.url}
                     alt="Vladimir Icovski eating French Fries"
-                    className={`border-solid border-red-400 border-b-8 ${
+                    className={`border-solid border-bittersweet border-b-8 ${
                       index % 2 === 0 ? "border-l-8" : "border-r-8"
                     }`}
                   />
@@ -80,9 +80,9 @@ export default function Project() {
                       >
                         <Icon
                           icon={`simple-icons:${tag.toLowerCase()}`}
-                          className="text-3xl text-white"
+                          className="text-3xl text-mintcream"
                         />
-                        <div className="text-white m-2">{tag}</div>
+                        <div className="text-mintcream m-2">{tag}</div>
                       </div>
                     ))}
                 </div>
@@ -92,7 +92,7 @@ export default function Project() {
                       href={project.live_site}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
                     >
                       <span>Live Site</span>
                     </a>
@@ -102,7 +102,7 @@ export default function Project() {
                       href={project.github}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
                     >
                       <span>GitHub</span>
                     </a>
@@ -112,7 +112,7 @@ export default function Project() {
                       href={project.blog_post}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-red-500 font-bold hover:underline hover:text-red-400"
+                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
                     >
                       <span>Case Study</span>
                     </a>

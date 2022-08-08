@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="relative flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300"
+      className="relative flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-crayola"
     >
       {/* <div data-nosnippet className="bg-text text-gray-500 opacity-5">
         кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас
@@ -38,13 +38,13 @@ export default function About() {
       </div> */}
       <div className="min-w-md xl:max-w-xl">
         <h1
-          className="text-5xl text-blue-500 title"
+          className="text-5xl text-turquoise font-sans"
           onMouseEnter={() => setTitle("За Мене")}
           onMouseLeave={() => setTitle("About Me")}
         >
           {title}
         </h1>
-        <div className="prose lg:prose-xl">
+        <div className="prose lg:prose-xl text-gunmetal">
           <BlockContent
             blocks={aboutData.bio}
             projectId="1i41jkhj"
@@ -59,10 +59,10 @@ export default function About() {
           className="rounded-full w-1/3 sm:w-2/4 xl:w-3/4"
         />
         <div className="lg:flex flex-col items-center gap-5 p-10">
-          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2 my-2">
+          <h2 className="rounded-lg border-2 border-turquoise border-dotted w-40 text-center text-turquoise p-2 my-2">
             View Blog
           </h2>
-          <h2 className="rounded-lg border-2 border-blue-500 border-dotted w-40 text-center text-blue-500 p-2 my-2">
+          <h2 className="rounded-lg border-2 border-turquoise border-dotted w-40 text-center text-turquoise p-2 my-2">
             Contact
           </h2>
         </div>
