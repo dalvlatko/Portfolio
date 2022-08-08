@@ -62,7 +62,9 @@ export default function Project() {
                 <img
                   src={project.screenshot.asset.url}
                   alt="Vladimir Icovski eating French Fries"
-                  className={`border-b-8 border-l-8 border-solid border-red-400`}
+                  className={`border-solid border-red-400 border-b-8 ${
+                    index % 2 === 0 ? "border-l-8" : "border-r-8"
+                  }`}
                 />
                 <div className="flex flex-wrap">
                   {project.tags &&
