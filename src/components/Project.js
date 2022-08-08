@@ -34,13 +34,16 @@ export default function Project() {
         {projectData &&
           projectData.map((project, index) => (
             <article
-              className={`flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 ${
+              className={`relative flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 ${
                 index % 2 === 0
                   ? "bg-gray-800"
                   : "sm:flex-row-reverse bg-blue-400"
               }`}
               key={index}
             >
+              {/* <div data-nosnippet className="bg-text text-gray-200 opacity-10">
+                ПРОЕКТ
+              </div> */}
               <div className="min-w-96 md:w-2/6">
                 <h1 className="inline pr-2 text-5xl text-yellow-300 title">
                   <a href={project.live_site} alt={project.title}>

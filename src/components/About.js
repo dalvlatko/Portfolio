@@ -30,8 +30,12 @@ export default function About() {
   return (
     <section
       id="About"
-      className="flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300"
+      className="relative flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-yellow-300"
     >
+      {/* <div data-nosnippet className="bg-text text-gray-500 opacity-5">
+        кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас
+        кој сум јас
+      </div> */}
       <div className="min-w-md xl:max-w-xl">
         <h1
           className="text-5xl text-blue-500 title"

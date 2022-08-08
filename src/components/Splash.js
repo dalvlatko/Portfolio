@@ -11,6 +11,10 @@ export default function Splash() {
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-red-400 border-solid border-t-4 border-yellow-300">
       <NavBar />
+      {/* <div data-nosnippet className="bg-text top-2 text-gray-200 opacity-10">
+        владимир ицовски владимир ицовски владимир ицовски владимир ицовски
+        владимир ицовски владимир ицовски
+      </div> */}
       <div className="mx-5 mt-auto text-right">
         <div className="p-2 text-6xl font-bold title">
           <h1
