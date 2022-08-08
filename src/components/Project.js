@@ -44,7 +44,7 @@ export default function Project() {
               {/* <div data-nosnippet className="bg-text text-gray-200 opacity-10">
                 ПРОЕКТ
               </div> */}
-              <div className="min-w-96 md:w-2/6">
+              <div className="min-w-[360px] lg:w-2/6">
                 <h1 className="inline pr-2 text-5xl text-crayola font-sans">
                   <a href={project.live_site} alt={project.title}>
                     {project.title}
