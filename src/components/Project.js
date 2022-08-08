@@ -27,16 +27,17 @@ export default function Project() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
+  const left =
+    "flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-gray-800";
+  const right =
+    "flex flex-wrap sm:flex-row-reverse justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-blue-400";
 
   return (
     <main>
       <section id="Projects">
         {projectData &&
           projectData.map((project, index) => (
-            <article
-              className="flex flex-wrap justify-center px-5 lg:px-10 xl:px-20 py-10 gap-8 bg-blue-300"
-              key={index}
-            >
+            <article className={index % 2 === 0 ? left : right} key={index}>
               <div className="w-96 lg:w-2/6">
                 <h1 className="text-5xl text-blue-500 title">
                   <a href={project.live_site} alt={project.title}>
