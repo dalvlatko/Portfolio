@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Socials from "../components/Socials";
+import BackgroundText from "./BackgroundText";
 
 export default function Splash() {
   const [intro, setIntro] = useState("Hello, I am");
   const [name, setName] = useState("Vladimir Icovski");
   const [dev, setDev] = useState("Web Developer");
   const [chemist, setChemist] = useState("Chemist");
+
+  const bgtext = "ЗДРАВО ВЛАТКО";
 
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola">
@@ -46,25 +49,7 @@ export default function Splash() {
       <div className="mt-auto mb-10">
         <Socials />
       </div>
-      <div
-        data-nosnippet
-        className="hidden xl:block bg-text top-10 text-gray-200 opacity-10"
-      >
-        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
-        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
-      </div>
-      <div
-        data-nosnippet
-        className="hidden md:block bg-text top-10 text-gray-200 opacity-10"
-      >
-        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
-      </div>
-      <div
-        data-nosnippet
-        className="md:hidden bg-text top-10 text-gray-200 opacity-10"
-      >
-        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
-      </div>
+      <BackgroundText text={bgtext} />
     </section>
   );
 }
