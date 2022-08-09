@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import { Icon } from "@iconify/react";
+import BackgroundText from "./BackgroundText.js";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -41,9 +42,6 @@ export default function Project() {
               }`}
               key={index}
             >
-              {/* <div data-nosnippet className="bg-text text-gray-200 opacity-10">
-                ПРОЕКТ
-              </div> */}
               <div className="min-w-[360px] lg:w-2/6">
                 <h1 className="inline pr-2 text-5xl text-crayola font-sans">
                   <a href={project.live_site} alt={project.title}>
@@ -121,6 +119,14 @@ export default function Project() {
                   )}
                 </div>
               </div>
+              {/* <BackgroundText
+                text={"НОВ ПРОЕКТ "}
+                reps2xl={6}
+                repsxl={4}
+                repsmd={3}
+                reps={1}
+                style={"#52d1c8"}
+              /> */}
             </article>
           ))}
       </section>

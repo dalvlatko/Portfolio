@@ -9,8 +9,6 @@ export default function Splash() {
   const [dev, setDev] = useState("Web Developer");
   const [chemist, setChemist] = useState("Chemist");
 
-  const bgtext = "ЗДРАВО ВЛАТКО ";
-
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola">
       <NavBar />
@@ -49,7 +47,14 @@ export default function Splash() {
       <div className="mt-auto mb-10">
         <Socials />
       </div>
-      <BackgroundText text={bgtext} />
+      <BackgroundText
+        text={"ЗДРАВО ВЛАТКО "}
+        reps2xl={15}
+        repsxl={8}
+        repsmd={5}
+        reps={2}
+        style={"#fa6565"}
+      />
     </section>
   );
 }
