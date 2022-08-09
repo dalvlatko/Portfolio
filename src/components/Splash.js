@@ -9,7 +9,7 @@ export default function Splash() {
   const [dev, setDev] = useState("Web Developer");
   const [chemist, setChemist] = useState("Chemist");
 
-  const bgtext = "ЗДРАВО ВЛАТКО";
+  const bgtext = "ЗДРАВО ВЛАТКО ";
 
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola">
