@@ -11,10 +11,6 @@ export default function Splash() {
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola">
       <NavBar />
-      {/* <div data-nosnippet className="bg-text top-2 text-gray-200 opacity-10">
-        владимир ицовски владимир ицовски владимир ицовски владимир ицовски
-        владимир ицовски владимир ицовски
-      </div> */}
       <div className="mx-5 mt-auto text-right">
         <div className="p-2 text-6xl font-bold font-sans">
           <h1
@@ -49,6 +45,25 @@ export default function Splash() {
       </div>
       <div className="mt-auto mb-10">
         <Socials />
+      </div>
+      <div
+        data-nosnippet
+        className="hidden xl:block bg-text top-10 text-gray-200 opacity-10"
+      >
+        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
+        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
+      </div>
+      <div
+        data-nosnippet
+        className="hidden md:block bg-text top-10 text-gray-200 opacity-10"
+      >
+        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
+      </div>
+      <div
+        data-nosnippet
+        className="md:hidden bg-text top-10 text-gray-200 opacity-10"
+      >
+        ЗДРАВО ВЛАТКО ЗДРАВО ВЛАТКО
       </div>
     </section>
   );

@@ -22,12 +22,11 @@ html {
 }
 .bg-text {
   z-index: 0;
-  top: 0;
   position: absolute;
   user-select: none;
   overflow: hidden;
   word-break: break-all;
   font-weight: 900;
-  font-size: 15rem;
+  font-size: 12rem;
   line-height: 1.1;
 }
