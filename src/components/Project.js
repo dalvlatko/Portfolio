@@ -44,7 +44,10 @@ export default function Project() {
             >
               <div className="min-w-[360px] lg:w-2/6">
                 <h1 className="inline pr-2 text-5xl text-crayola font-sans">
-                  <a href={project.live_site} alt={project.title}>
+                  <a
+                    href={project.live_site || project.github}
+                    alt={project.title}
+                  >
                     {project.title}
                   </a>
                 </h1>
@@ -92,7 +95,9 @@ export default function Project() {
                       href={project.live_site}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
+                      className={`text-${
+                        index % 2 === 0 ? "turquoise" : "gunmetal"
+                      } font-bold hover:underline hover:text-crayola`}
                     >
                       <span>Live Site</span>
                     </a>
@@ -102,7 +107,9 @@ export default function Project() {
                       href={project.github}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
+                      className={`text-${
+                        index % 2 === 0 ? "turquoise" : "gunmetal"
+                      } font-bold hover:underline hover:text-crayola`}
                     >
                       <span>GitHub</span>
                     </a>
@@ -112,7 +119,9 @@ export default function Project() {
                       href={project.blog_post}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="text-bittersweet font-bold hover:underline hover:text-crayola"
+                      className={`text-${
+                        index % 2 === 0 ? "turquoise" : "gunmetal"
+                      } font-bold hover:underline hover:text-crayola`}
                     >
                       <span>Case Study</span>
                     </a>

@@ -595,6 +595,10 @@ video {
   top: 2.5rem;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -718,6 +722,11 @@ video {
   max-width: 100%;
 }
 
+.select-none {
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -760,6 +769,14 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-full {
@@ -962,6 +979,10 @@ video {
   line-height: 1;
 }
 
+.text-\[12rem\] {
+  font-size: 12rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -982,6 +1003,10 @@ video {
   line-height: 1;
 }
 
+.font-black {
+  font-weight: 900;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -990,13 +1015,12 @@ video {
   font-weight: 300;
 }
 
-.leading-snug {
-  line-height: 1.375;
+.leading-none {
+  line-height: 1;
 }
 
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+.leading-snug {
+  line-height: 1.375;
 }
 
 .text-turquoise {
@@ -1017,30 +1041,13 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
 .text-crayola {
   color: #ffe66dff;
-}
-
-.text-bittersweet {
-  color: #ff6b6bff;
 }
 
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.opacity-5 {
-  opacity: 0.05;
-}
-
-.opacity-10 {
-  opacity: 0.1;
 }
 
 .shadow {
@@ -1070,23 +1077,6 @@ video {
 html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  --gunmetal: #292f36ff;
-  --medium-turquoise: #00a59a;
-  --mint-cream: #f7fff7ff;
-  --bittersweet: #ff6b6bff;
-  --yellow-crayola: #ffe66dff;
-}
-
-.bg-text {
-  z-index: 0;
-  position: absolute;
-  -webkit-user-select: none;
-          user-select: none;
-  overflow: hidden;
-  word-break: break-all;
-  font-weight: 900;
-  font-size: 12rem;
-  line-height: 1.1;
 }
 
 .hover\:border-4:hover {
@@ -1183,6 +1173,10 @@ html {
     display: block;
   }
 
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:w-3\/4 {
     width: 75%;
   }
@@ -1198,5 +1192,15 @@ html {
   .xl\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:block {
+    display: block;
+  }
+
+  .\32xl\:hidden {
+    display: none;
   }
 }

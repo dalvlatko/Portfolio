@@ -32,10 +32,6 @@ export default function About() {
       id="About"
       className="relative flex flex-wrap justify-center lg:px-20 md:px-10 px-5 py-10 gap-8 bg-crayola"
     >
-      {/* <div data-nosnippet className="bg-text text-gray-500 opacity-5">
-        кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас кој сум јас
-        кој сум јас
-      </div> */}
       <div className="min-w-md xl:max-w-xl">
         <h1
           className="text-5xl text-turquoise font-sans"
