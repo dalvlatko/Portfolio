@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gunmetal: "#292f36ff",
-        turquoise: "#00A59A",
+        gunmetal: { DEFAULT: "#292f36ff", light: "#2A3138" },
+        turquoise: { DEFAULT: "#00A59A", light: "#07A096" },
         mintcream: "#f7fff7ff",
-        bittersweet: "#ff6b6bff",
+        bittersweet: { DEFAULT: "#ff6b6bff", light: "#fa6565" },
         crayola: "#ffe66dff",
       },
     },

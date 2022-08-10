@@ -128,14 +128,19 @@ export default function Project() {
                     ))}
                 </div>
               </div>
-              {/* <BackgroundText
+              <BackgroundText
                 text={"НОВ ПРОЕКТ "}
-                reps2xl={6}
+                reps2xl={5}
                 repsxl={4}
-                repsmd={3}
-                reps={1}
-                style={"#52d1c8"}
-              /> */}
+                repsmd={2}
+                repssm={2}
+                reps={7}
+                bgTextColor={
+                  index % 2 === 0
+                    ? "text-gunmetal-light"
+                    : "text-turquoise-light"
+                }
+              />
             </article>
           ))}
       </section>

@@ -51,9 +51,10 @@ export default function Splash() {
         text={"ЗДРАВО ВЛАТКО "}
         reps2xl={15}
         repsxl={8}
-        repsmd={5}
-        reps={2}
-        style={"#fa6565"}
+        repsmd={4}
+        repssm={3}
+        reps={8}
+        bgTextColor={"text-bittersweet-light"}
       />
     </section>
   );

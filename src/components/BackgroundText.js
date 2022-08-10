@@ -5,12 +5,13 @@ export default function BackgroundText({
   reps2xl,
   repsxl,
   repsmd,
+  repssm,
   reps,
-  style,
+  bgTextColor,
 }) {
   return (
     <div
-      className={`z-0 absolute select-none overflow-hidden break-all font-black text-[12rem] text-[${style}] leading-none top-10`}
+      className={`z-0 text-[5rem] sm:text-[12rem] absolute select-none overflow-hidden break-all font-black ${bgTextColor} leading-none top-10`}
     >
       <div className="hidden 2xl:block" data-nosnippet>
         {text.repeat(reps2xl)}
@@ -21,7 +22,10 @@ export default function BackgroundText({
       <div className="hidden md:block xl:hidden" data-nosnippet>
         {text.repeat(repsmd)}
       </div>
-      <div className="block md:hidden" data-nosnippet>
+      <div className="hidden sm:block md:hidden" data-nosnippet>
+        {text.repeat(repssm)}
+      </div>
+      <div className="block sm:hidden" data-nosnippet>
         {text.repeat(reps)}
       </div>
     </div>
