@@ -49,7 +49,7 @@ export default function Splash() {
       </div>
       <BackgroundText
         text={"ЗДРАВО ВЛАТКО "}
-        reps2xl={15}
+        reps2xl={16}
         repsxl={8}
         repsmd={4}
         repssm={3}

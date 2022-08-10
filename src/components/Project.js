@@ -23,6 +23,7 @@ export default function Project() {
             url
           },
         },
+        cyrillic
       }`
       )
       .then((data) => setProjectData(data))
@@ -129,12 +130,12 @@ export default function Project() {
                 </div>
               </div>
               <BackgroundText
-                text={"НОВ ПРОЕКТ "}
-                reps2xl={5}
+                text={project.cyrillic || "НОВ ПРОЕКТ "}
+                reps2xl={7}
                 repsxl={4}
-                repsmd={2}
+                repsmd={4}
                 repssm={2}
-                reps={7}
+                reps={10}
                 bgTextColor={
                   index % 2 === 0
                     ? "text-gunmetal-light"

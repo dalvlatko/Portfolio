@@ -48,5 +48,9 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "cyrillic",
+      type: "string",
+    },
   ],
 };
