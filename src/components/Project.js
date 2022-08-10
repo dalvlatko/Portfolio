@@ -30,6 +30,8 @@ export default function Project() {
       .catch(console.error);
   }, []);
 
+  if (!projectData) return "Loading...";
+
   return (
     <section id="Projects" className="overflow-hidden">
       {projectData &&
@@ -104,7 +106,9 @@ export default function Project() {
               {project.screenshot && (
                 <img
                   src={project.screenshot.asset.url}
-                  alt="Vladimir Icovski eating French Fries"
+                  alt={`Screenshot of ${project.title} project | ${
+                    project.live_site || project.github
+                  }`}
                   className={`border-solid border-turquoise border-b-[20px] ${
                     index % 2 === 0
                       ? "border-l-[20px]"

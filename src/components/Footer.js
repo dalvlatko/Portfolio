@@ -4,7 +4,7 @@ import Socials from "../components/Socials";
 export default function Footer() {
   return (
     <footer
-      id="#Contact"
+      id="Contact"
       className="flex flex-col justify-center items-center min-h-[5rem] py-5 bg-bittersweet border-solid border-b-[6px] border-crayola"
     >
       <div className="p-2 font-bold font-sans text-mintcream">
