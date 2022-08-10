@@ -15,3 +15,13 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+.prose a {
+  color: #f7fff7ff;
+  text-decoration: underline dotted;
+  text-decoration-color: #ffe66dff;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+.prose a:hover {
+  text-decoration-color: #ff6b6bff;
+}

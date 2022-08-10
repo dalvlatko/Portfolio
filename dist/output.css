@@ -759,16 +759,16 @@ video {
   gap: 1.25rem;
 }
 
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1077,6 +1077,21 @@ video {
 html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+}
+
+.prose a {
+  color: #f7fff7ff;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  -webkit-text-decoration-color: #ffe66dff;
+          text-decoration-color: #ffe66dff;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+.prose a:hover {
+  -webkit-text-decoration-color: #ff6b6bff;
+          text-decoration-color: #ff6b6bff;
 }
 
 .hover\:border-4:hover {

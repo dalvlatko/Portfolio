@@ -61,34 +61,6 @@ export default function Project() {
                     dataset="production"
                   />
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-10 w-96">
-                {project.screenshot && (
-                  <img
-                    src={project.screenshot.asset.url}
-                    alt="Vladimir Icovski eating French Fries"
-                    className={`border-solid border-turquoise border-b-[20px] ${
-                      index % 2 === 0
-                        ? "border-l-[20px]"
-                        : "border-r-[20px] border-gunmetal"
-                    }`}
-                  />
-                )}
-                <div className="flex flex-wrap">
-                  {project.tags &&
-                    project.tags.map((tag, index) => (
-                      <div
-                        className="flex flex-col items-center my-2 mr-2"
-                        key={index}
-                      >
-                        <Icon
-                          icon={`simple-icons:${tag.toLowerCase()}`}
-                          className="text-3xl text-mintcream"
-                        />
-                        <div className="text-mintcream m-2">{tag}</div>
-                      </div>
-                    ))}
-                </div>
                 <div className="my-2 space-x-4">
                   {project.live_site && (
                     <a
@@ -126,6 +98,34 @@ export default function Project() {
                       <span>Case Study</span>
                     </a>
                   )}
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-10 w-96">
+                {project.screenshot && (
+                  <img
+                    src={project.screenshot.asset.url}
+                    alt="Vladimir Icovski eating French Fries"
+                    className={`border-solid border-turquoise border-b-[20px] ${
+                      index % 2 === 0
+                        ? "border-l-[20px]"
+                        : "border-r-[20px] border-gunmetal"
+                    }`}
+                  />
+                )}
+                <div className="flex flex-wrap">
+                  {project.tags &&
+                    project.tags.map((tag, index) => (
+                      <div
+                        className="flex flex-col items-center my-2 mr-2"
+                        key={index}
+                      >
+                        <Icon
+                          icon={`simple-icons:${tag.toLowerCase()}`}
+                          className="text-3xl text-mintcream"
+                        />
+                        <div className="text-mintcream m-2">{tag}</div>
+                      </div>
+                    ))}
                 </div>
               </div>
               {/* <BackgroundText
