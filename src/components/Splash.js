@@ -10,7 +10,7 @@ export default function Splash() {
   const [chemist, setChemist] = useState("Chemist");
 
   return (
-    <section className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola overflow-hidden relative">
+    <header className="flex flex-col justify-center items-center h-screen bg-bittersweet border-solid border-t-[6px] border-crayola overflow-hidden relative">
       <NavBar />
       <div className="mx-5 mt-auto text-right">
         <div className="p-2 text-6xl font-bold font-sans">
@@ -53,6 +53,6 @@ export default function Splash() {
         bgTextColor={"text-bittersweet-light"}
         position={"top-10"}
       />
-    </section>
+    </header>
   );
 }

@@ -45,7 +45,7 @@ export default function Project() {
             key={index}
           >
             <div className="min-w-[360px] lg:w-2/6">
-              <h1 className="inline pr-2 text-5xl text-crayola font-sans">
+              <h1 className="inline pr-2 text-5xl text-crayola font-sans font-semibold">
                 <a
                   href={project.live_site || project.github}
                   alt={project.title}
@@ -73,7 +73,7 @@ export default function Project() {
                       index % 2 === 0
                         ? "text-turquoise border-turquoise hover:bg-turquoise"
                         : "text-gunmetal border-gunmetal hover:bg-gunmetal"
-                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
                   >
                     <span>Live Site</span>
                   </a>
@@ -87,7 +87,7 @@ export default function Project() {
                       index % 2 === 0
                         ? "text-turquoise border-turquoise hover:bg-turquoise"
                         : "text-gunmetal border-gunmetal hover:bg-gunmetal"
-                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
                   >
                     <span>GitHub</span>
                   </a>
@@ -101,7 +101,7 @@ export default function Project() {
                       index % 2 === 0
                         ? "text-turquoise border-turquoise hover:bg-turquoise"
                         : "text-gunmetal border-gunmetal hover:bg-gunmetal"
-                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
                   >
                     <span>Case Study</span>
                   </a>

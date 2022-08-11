@@ -34,7 +34,7 @@ export default function About() {
     >
       <div className="min-w-md xl:max-w-xl">
         <h1
-          className="text-5xl text-turquoise font-sans"
+          className="text-5xl text-turquoise font-sans font-semibold"
           onMouseEnter={() => setTitle("За Мене")}
           onMouseLeave={() => setTitle("About Me")}
         >
@@ -56,12 +56,12 @@ export default function About() {
         />
         <div className="lg:flex flex-col items-center gap-5 p-10">
           <NavLink to="/post">
-            <h2 className="rounded-lg border-2 border-turquoise border-solid hover:bg-turquoise hover:text-mintcream w-40 text-center text-turquoise p-2 my-2">
+            <h2 className="rounded-lg border-2 border-turquoise border-solid hover:bg-turquoise hover:text-mintcream w-40 text-center font-semibold text-turquoise p-2 my-2">
               View Blog
             </h2>
           </NavLink>
           <a href="#Contact">
-            <h2 className="rounded-lg border-2 border-turquoise border-solid hover:bg-turquoise hover:text-mintcream w-40 text-center text-turquoise p-2 my-2">
+            <h2 className="rounded-lg border-2 border-turquoise border-solid hover:bg-turquoise hover:text-mintcream w-40 text-center font-semibold text-turquoise p-2 my-2">
               Contact
             </h2>
           </a>
