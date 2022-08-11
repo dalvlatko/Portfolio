@@ -9,14 +9,14 @@ export default function Footer() {
       className="flex flex-col justify-center items-center min-h-[5rem] py-5 bg-bittersweet border-solid border-b-[6px] border-crayola"
     >
       <div className="flex flex-wrap items-center justify-center p-2 font-bold font-sans text-mintcream">
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center p-5">
           <a href="https://www.vlatko.org">
             <img
               src={logo}
               alt="VLAD logo"
-              className="mr-5 max-w-[100px] max-h-[100px]"
+              className="max-w-[100px] max-h-[100px]"
             ></img>
-            <h2 className="text-2xl p-1">vlatko.org</h2>
+            <h2 className="text-xl text-center p-1">vlatko.org</h2>
           </a>
         </div>
         <div className="flex flex-col">
