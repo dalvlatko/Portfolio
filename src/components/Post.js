@@ -49,7 +49,7 @@ export default function Post() {
                       alt={post.mainImage.alt}
                       className="w-full h-full rounded-r object-over absolute"
                     />
-                    <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
+                    <span className="relative h-full flex justify-end items-end pr-4 pb-4">
                       <h3 className="text-lg font-bold px-3 py-4 bg-opacity-75 text-white drop-shadow-lg">
                         {post.title === undefined
                           ? post.publishedAt + " Blog"

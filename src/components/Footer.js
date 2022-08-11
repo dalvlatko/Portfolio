@@ -11,7 +11,11 @@ export default function Footer() {
       <div className="flex flex-wrap items-center justify-center p-2 font-bold font-sans text-mintcream">
         <div className="flex flex-col">
           <a href="https://www.vlatko.org">
-            <img src={logo} className="mr-5 max-w-[100px] max-h-[100px]"></img>
+            <img
+              src={logo}
+              alt="VLAD logo"
+              className="mr-5 max-w-[100px] max-h-[100px]"
+            ></img>
             <h2 className="text-2xl p-1">vlatko.org</h2>
           </a>
         </div>
