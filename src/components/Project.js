@@ -53,7 +53,7 @@ export default function Project() {
                   {project.title}
                 </a>
               </h1>
-              <div className="inline my-2 text-mintcream">
+              <div className="inline text-mintcream">
                 {new Date(project.date).getUTCFullYear()}
               </div>
               <div className="prose my-2 text-mintcream">
@@ -63,15 +63,17 @@ export default function Project() {
                   dataset="production"
                 />
               </div>
-              <div className="my-2 space-x-4">
+              <div className="mt-8 space-x-4">
                 {project.live_site && (
                   <a
                     href={project.live_site}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={`text-${
-                      index % 2 === 0 ? "turquoise" : "gunmetal"
-                    } font-bold hover:underline hover:text-crayola`}
+                    className={`${
+                      index % 2 === 0
+                        ? "text-turquoise border-turquoise hover:bg-turquoise"
+                        : "text-gunmetal border-gunmetal hover:bg-gunmetal"
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
                   >
                     <span>Live Site</span>
                   </a>
@@ -81,9 +83,11 @@ export default function Project() {
                     href={project.github}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={`text-${
-                      index % 2 === 0 ? "turquoise" : "gunmetal"
-                    } font-bold hover:underline hover:text-crayola`}
+                    className={`${
+                      index % 2 === 0
+                        ? "text-turquoise border-turquoise hover:bg-turquoise"
+                        : "text-gunmetal border-gunmetal hover:bg-gunmetal"
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
                   >
                     <span>GitHub</span>
                   </a>
@@ -93,9 +97,11 @@ export default function Project() {
                     href={project.blog_post}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={`text-${
-                      index % 2 === 0 ? "turquoise" : "gunmetal"
-                    } font-bold hover:underline hover:text-crayola`}
+                    className={`${
+                      index % 2 === 0
+                        ? "text-turquoise border-turquoise hover:bg-turquoise"
+                        : "text-gunmetal border-gunmetal hover:bg-gunmetal"
+                    } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center p-2`}
                   >
                     <span>Case Study</span>
                   </a>
