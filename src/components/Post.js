@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
+import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
+import BackgroundText from "./BackgroundText";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
+  const { slug } = useParams();
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"] | order(publishedAt desc){
+        `*_type == "post"] | order(publishedAt desc){
           title,
           slug,
           publishedAt,
@@ -18,7 +22,8 @@ export default function Post() {
               url
             },
             alt
-          }
+          },
+          body
         }`
       )
       .then((data) => setPost(data))
@@ -26,42 +31,42 @@ export default function Post() {
     console.log("sanity data fetched");
   }, []);
 
-  let numThumbnails = 2;
-
   return (
-    <main className="p-12">
-      <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center">Latest Blogs</h1>
-        <h2 className="text-lg flex justify-center mb-12">
-          My thoughts on everything
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {postData &&
-            postData.slice(0, numThumbnails).map((post, index) => (
-              <article key={index}>
-                <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                  <span
-                    className="block h-64 relative rounded shadow leading-snug border-l-8 border-blue-600"
-                    key={index}
-                  >
-                    <img
-                      src={post.mainImage.asset.url}
-                      alt={post.mainImage.alt}
-                      className="w-full h-full rounded-r object-over absolute"
-                    />
-                    <span className="relative h-full flex justify-end items-end pr-4 pb-4">
-                      <h3 className="text-lg font-bold px-3 py-4 bg-opacity-75 text-white drop-shadow-lg">
-                        {post.title === undefined
-                          ? post.publishedAt + " Blog"
-                          : post.title}
-                      </h3>
-                    </span>
-                  </span>
-                </Link>
-              </article>
-            ))}
-        </div>
-      </section>
-    </main>
+    <section id="Projects" className="overflow-hidden">
+      {postData &&
+        postData.map((post, index) => (
+          <article
+            className={`relative flex flex-col max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
+              index % 2 === 0 ? "bg-gunmetal" : "bg-turquoise"
+            }`}
+            key={index}
+          >
+            <h1 className="text-5xl text-crayola font-sans font-semibold">
+              {post.title}
+            </h1>
+            <div className="text-mintcream">
+              {`${new Date(post.publishedAt).getUTCMonth()}$
+              {new Date(post.publishedAt).getUTCDay()}, 
+              ${new Date(post.publishedAt).getUTCFullYear()}`}
+            </div>
+
+            <div className="prose my-2 text-mintcream">
+              <BlockContent
+                blocks={post.body}
+                postId="1i41jkhj"
+                dataset="production"
+              />
+            </div>
+            <BackgroundText
+              text={post.cyrillic || "НОВ ПРОЕКТ "}
+              reps={10}
+              bgTextColor={
+                index % 2 === 0 ? "text-gunmetal-light" : "text-turquoise-light"
+              }
+              position={"top-0"}
+            />
+          </article>
+        ))}
+    </section>
   );
 }

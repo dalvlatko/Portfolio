@@ -4,6 +4,7 @@ import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Project from "./components/Project";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Project} path="/project" />
+        <Route component={Header} path="/test" />
       </Switch>
     </BrowserRouter>
   );
