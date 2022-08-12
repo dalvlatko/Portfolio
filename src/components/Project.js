@@ -140,7 +140,7 @@ export default function Project() {
             </div>
             <BackgroundText
               text={project.cyrillic || "НОВ ПРОЕКТ "}
-              reps={10}
+              reps={1000}
               bgTextColor={
                 index % 2 === 0 ? "text-gunmetal-light" : "text-turquoise-light"
               }

@@ -16,20 +16,13 @@ export default function Header() {
               alt="VLAD logo"
               className="max-w-[100px] max-h-[100px]"
             ></img>
-            <h2 className="text-xl text-center p-1">vlatko.org</h2>
+            <h2 className="text-xl text-mintcream text-center p-1">
+              vlatko.org
+            </h2>
           </a>
         </div>
         <div className="text-white text-5xl font-sans mt-12">Blog</div>
       </div>
-
-      <Post />
-
-      <BackgroundText
-        text={"ЗДРАВО ВЛАТКО "}
-        reps={1000}
-        bgTextColor={"text-bittersweet-light"}
-        position={"top-14 sm:text-5xl"}
-      />
     </header>
   );
 }

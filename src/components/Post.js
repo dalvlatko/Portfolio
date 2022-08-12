@@ -8,11 +8,15 @@ import BackgroundText from "./BackgroundText";
 export default function Post() {
   const [postData, setPost] = useState(null);
   const { slug } = useParams();
+  const fetchParam = () =>
+    slug
+      ? `[slug.current == "${slug}"]`
+      : `[_type == "post"] | order(publishedAt desc)`;
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*_type == "post"] | order(publishedAt desc){
+        `*[_type == "post"] | order(publishedAt desc){
           title,
           slug,
           publishedAt,
@@ -32,11 +36,14 @@ export default function Post() {
   }, []);
 
   return (
-    <section id="Projects" className="overflow-hidden">
+    <section
+      id="Projects"
+      className="relative flex flex-col items-center justify-center bg-bittersweet overflow-hidden"
+    >
       {postData &&
         postData.map((post, index) => (
           <article
-            className={`relative flex flex-col max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
+            className={`relative flex flex-col w-full max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
               index % 2 === 0 ? "bg-gunmetal" : "bg-turquoise"
             }`}
             key={index}
@@ -44,10 +51,12 @@ export default function Post() {
             <h1 className="text-5xl text-crayola font-sans font-semibold">
               {post.title}
             </h1>
-            <div className="text-mintcream">
-              {`${new Date(post.publishedAt).getUTCMonth()}$
-              {new Date(post.publishedAt).getUTCDay()}, 
-              ${new Date(post.publishedAt).getUTCFullYear()}`}
+            <div className="text-mintcream py-2">
+              {new Date(post.publishedAt).toLocaleString("default", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
             </div>
 
             <div className="prose my-2 text-mintcream">
@@ -67,6 +76,12 @@ export default function Post() {
             />
           </article>
         ))}
+      <BackgroundText
+        text={"ЗДРАВО ВЛАТКО "}
+        reps={1000}
+        bgTextColor={"text-bittersweet-light"}
+        position={"top-2 sm:text-5xl"}
+      />
     </section>
   );
 }

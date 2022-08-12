@@ -4,7 +4,7 @@ import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Project from "./components/Project";
-import Header from "./components/Header";
+import Blog from "./components/Blog";
 
 function App() {
   return (
@@ -12,10 +12,9 @@ function App() {
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />
-        <Route component={SinglePost} path="/post/:slug" />
-        <Route component={Post} path="/post" />
         <Route component={Project} path="/project" />
-        <Route component={Header} path="/test" />
+        <Route component={Blog} path="/blog" />
+        <Route component={SinglePost} path="/post/:slug" />
       </Switch>
     </BrowserRouter>
   );
