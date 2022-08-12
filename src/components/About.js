@@ -55,7 +55,7 @@ export default function About() {
           className="rounded-full w-1/3 sm:w-2/4 xl:w-3/4"
         />
         <div className="lg:flex flex-col items-center gap-5 p-10">
-          <NavLink to="/post">
+          <NavLink to="/blog">
             <h2 className="rounded-lg border-2 border-turquoise border-solid hover:bg-turquoise hover:text-mintcream w-40 text-center font-semibold text-turquoise p-2 my-2">
               View Blog
             </h2>

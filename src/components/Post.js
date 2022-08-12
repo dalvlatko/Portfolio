@@ -37,13 +37,13 @@ export default function Post() {
 
   return (
     <section
-      id="Projects"
+      id="Blog"
       className="relative flex flex-col items-center justify-center bg-bittersweet overflow-hidden"
     >
       {postData &&
         postData.map((post, index) => (
           <article
-            className={`relative flex flex-col w-full max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
+            className={`relative flex flex-col items-center w-full max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
               index % 2 === 0 ? "bg-gunmetal" : "bg-turquoise"
             }`}
             key={index}
@@ -51,7 +51,7 @@ export default function Post() {
             <h1 className="text-5xl text-crayola font-sans font-semibold">
               {post.title}
             </h1>
-            <div className="text-mintcream py-2">
+            <div className="inline text-mintcream py-2">
               {new Date(post.publishedAt).toLocaleString("default", {
                 month: "long",
                 day: "numeric",
