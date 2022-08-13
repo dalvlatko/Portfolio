@@ -45,7 +45,7 @@ export default function Post() {
       {postData &&
         postData.map((post, index) => (
           <article
-            className={`relative flex flex-col items-center w-full max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
+            className={`relative flex flex-col items-center w-full max-w-[900px] px-5 sm:px-12 lg:px-10 xl:px-20 py-10 gap-5 ${
               index % 2 === 0 ? "bg-gunmetal" : "bg-turquoise"
             }`}
             key={index}
