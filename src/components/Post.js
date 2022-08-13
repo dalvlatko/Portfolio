@@ -35,8 +35,10 @@ export default function Post() {
     console.log("sanity data fetched");
   }, []);
 
+  if (!Post) return "Loading...";
+
   return (
-    <section
+    <main
       id="Blog"
       className="relative flex flex-col items-center justify-center bg-bittersweet overflow-hidden"
     >
@@ -48,16 +50,25 @@ export default function Post() {
             }`}
             key={index}
           >
-            <h1 className="text-5xl text-crayola font-sans font-semibold">
+            <h1 className="text-5xl w-full text-crayola font-sans font-semibold">
               {post.title}
             </h1>
-            <div className="inline text-mintcream py-2">
+            <div className="w-full text-mintcream py-2">
               {new Date(post.publishedAt).toLocaleString("default", {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
               })}
             </div>
+            {post.mainImage && (
+              <img
+                src={post.mainImage.asset.url}
+                alt={post.mainImage.alt}
+                className={`border-solid border-y-[6px] ${
+                  index % 2 === 0 ? "border-turquoise" : "border-gunmetal"
+                }`}
+              />
+            )}
 
             <div className="prose my-2 text-mintcream">
               <BlockContent
@@ -67,7 +78,7 @@ export default function Post() {
               />
             </div>
             <BackgroundText
-              text={post.cyrillic || "НОВ ПРОЕКТ "}
+              text={post.cyrillic || "НОВ ПOCТ "}
               reps={10}
               bgTextColor={
                 index % 2 === 0 ? "text-gunmetal-light" : "text-turquoise-light"
@@ -82,6 +93,6 @@ export default function Post() {
         bgTextColor={"text-bittersweet-light"}
         position={"top-2 sm:text-5xl"}
       />
-    </section>
+    </main>
   );
 }

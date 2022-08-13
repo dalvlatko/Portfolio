@@ -33,7 +33,7 @@ export default function Project() {
   if (!projectData) return "Loading...";
 
   return (
-    <section id="Projects" className="overflow-hidden">
+    <main id="Projects" className="overflow-hidden">
       {projectData &&
         projectData.map((project, index) => (
           <article
@@ -148,6 +148,6 @@ export default function Project() {
             />
           </article>
         ))}
-    </section>
+    </main>
   );
 }

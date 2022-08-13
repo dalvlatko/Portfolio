@@ -6,10 +6,10 @@ import BackgroundText from "./BackgroundText.js";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Header />
       <Post />
       <Footer />
-    </main>
+    </div>
   );
 }
