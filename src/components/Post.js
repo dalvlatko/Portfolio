@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BackgroundText from "./BackgroundText";
