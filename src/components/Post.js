@@ -70,7 +70,7 @@ export default function Post() {
               />
             )}
 
-            <div className="prose-xl text-lg my-2 text-mintcream">
+            <div className="prose-xl w-full text-lg my-2 text-mintcream">
               <BlockContent
                 blocks={post.body}
                 postId="1i41jkhj"
