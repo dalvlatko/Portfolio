@@ -113,7 +113,7 @@ export default function Project() {
                 <img
                   src={project.screenshot.asset.url}
                   alt={
-                    project.screeshot.alt ||
+                    project.screenshot.alt ||
                     `Screenshot of ${project.title} project | ${
                       project.live_site || project.github
                     }`
