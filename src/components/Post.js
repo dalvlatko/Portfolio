@@ -8,10 +8,7 @@ import BackgroundText from "./BackgroundText";
 export default function Post() {
   const [postData, setPost] = useState(null);
   const { slug } = useParams();
-  const fetchParam = () =>
-    slug
-      ? `[slug.current == "${slug}"]`
-      : `[_type == "post"] | order(publishedAt desc)`;
+  const [numBlogs, setNumBlogs] = useState(3);
 
   useEffect(() => {
     sanityClient
@@ -28,12 +25,12 @@ export default function Post() {
             alt
           },
           body
-        }`
+        }[0..${numBlogs}]`
       )
       .then((data) => setPost(data))
       .catch(console.error);
     console.log("sanity data fetched");
-  }, []);
+  }, [numBlogs]);
 
   if (!Post) return "Loading...";
 
@@ -85,6 +82,29 @@ export default function Post() {
               }
               position={"top-0"}
             />
+            {index === numBlogs && postData.length > numBlogs && (
+              <div className="flex flex-col gap-y-2">
+                <button
+                  className={`${
+                    index % 2 === 0
+                      ? "text-turquoise border-turquoise hover:bg-turquoise"
+                      : "text-gunmetal border-gunmetal hover:bg-gunmetal"
+                  } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
+                  onClick={() => setNumBlogs((prevNum) => prevNum + 1)}
+                >
+                  Load +1 Blog
+                </button>
+                <button
+                  className={`${
+                    index % 2 === 0
+                      ? "text-turquoise border-turquoise hover:bg-turquoise"
+                      : "text-gunmetal border-gunmetal hover:bg-gunmetal"
+                  } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
+                >
+                  Archive
+                </button>
+              </div>
+            )}
           </article>
         ))}
       <BackgroundText
