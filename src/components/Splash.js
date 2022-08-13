@@ -31,7 +31,7 @@ export default function Splash() {
         </div>
         <h2
           className="p-2 text-2xl text-mintcream font-light"
-          onMouseEnter={() => setDev("Веб Развивач")}
+          onMouseEnter={() => setDev("Веб Програмер")}
           onMouseLeave={() => setDev("Web Developer")}
         >
           {dev}

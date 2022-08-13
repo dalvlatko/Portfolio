@@ -112,9 +112,12 @@ export default function Project() {
               {project.screenshot && (
                 <img
                   src={project.screenshot.asset.url}
-                  alt={`Screenshot of ${project.title} project | ${
-                    project.live_site || project.github
-                  }`}
+                  alt={
+                    project.screeshot.alt ||
+                    `Screenshot of ${project.title} project | ${
+                      project.live_site || project.github
+                    }`
+                  }
                   className={`border-solid border-turquoise border-b-[20px] ${
                     index % 2 === 0
                       ? "border-l-[20px]"
