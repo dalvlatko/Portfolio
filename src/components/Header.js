@@ -1,8 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import BackgroundText from "./BackgroundText";
 import logo from "../images/logo-nobg.png";
-import Post from "./Post";
 
 export default function Header() {
   return (

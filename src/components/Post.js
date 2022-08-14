@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BackgroundText from "./BackgroundText";
@@ -42,7 +42,7 @@ export default function Post() {
       {postData &&
         postData.map((post, index) => (
           <article
-            className={`relative flex flex-col items-center w-full max-w-[900px] px-5 lg:px-10 xl:px-20 py-10 ${
+            className={`relative flex flex-col items-center w-full max-w-[900px] px-5 sm:px-12 lg:px-10 xl:px-20 py-10 gap-5 ${
               index % 2 === 0 ? "bg-gunmetal" : "bg-turquoise"
             }`}
             key={index}
@@ -67,7 +67,7 @@ export default function Post() {
               />
             )}
 
-            <div className="prose-xl text-lg my-2 text-mintcream">
+            <div className="prose-xl w-full text-lg my-2 text-mintcream">
               <BlockContent
                 blocks={post.body}
                 postId="1i41jkhj"
