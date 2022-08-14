@@ -14,7 +14,7 @@ function App() {
         <Route component={About} path="/about" />
         <Route component={Project} path="/project" />
         <Route component={Blog} path="/blog" exact />
-        <Route component={SinglePost} path="/post/:slug" />
+        <Route component={Blog} path="/post/:slug" />
         <Route component={Archive} path="/blog/archive" />
       </Switch>
     </BrowserRouter>

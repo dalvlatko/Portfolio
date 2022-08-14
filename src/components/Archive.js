@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BlockContent from "@sanity/block-content-to-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BackgroundText from "./BackgroundText";
@@ -66,9 +65,16 @@ export default function Archive() {
               )
               .map((post, index) => (
                 <article className="flex flex-wrap" key={index}>
-                  <h1 className="text-2xl text-crayola font-sans font-semibold">
-                    {post.title}
-                  </h1>
+                  <Link
+                    onClick={window.scrollTo(0, 0)}
+                    to={"/post/" + post.slug.current}
+                    key={post.slug.current}
+                    className="w-full"
+                  >
+                    <h1 className="text-2xl text-crayola font-sans font-semibold">
+                      {post.title}
+                    </h1>
+                  </Link>
                   <div className="text-mintcream ml-auto">
                     {new Date(post.publishedAt).toLocaleString("default", {
                       month: "long",

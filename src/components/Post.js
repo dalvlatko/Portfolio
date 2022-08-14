@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
+import SinglePost from "./SinglePost";
 import BackgroundText from "./BackgroundText";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
+  const [numBlogs, setNumBlogs] = useState(1);
   const { slug } = useParams();
-  const [numBlogs, setNumBlogs] = useState(5);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"] | order(publishedAt desc){
+        `*[_type == "post" && slug.current != "${slug}"] | order(publishedAt desc){
           title,
           slug,
           publishedAt,
@@ -30,7 +31,7 @@ export default function Post() {
       .then((data) => setPost(data))
       .catch(console.error);
     console.log("sanity data fetched");
-  }, []);
+  }, [slug]);
 
   if (!Post) return "Loading...";
 
@@ -39,6 +40,7 @@ export default function Post() {
       id="Blog"
       className="relative flex flex-col items-center justify-center bg-bittersweet overflow-hidden"
     >
+      <SinglePost />
       {postData &&
         postData.map(
           (post, index) =>
@@ -49,9 +51,16 @@ export default function Post() {
                 }`}
                 key={index}
               >
-                <h1 className="text-5xl w-full text-crayola font-sans font-semibold">
-                  {post.title}
-                </h1>
+                <Link
+                  onClick={window.scrollTo(0, 0)}
+                  to={"/post/" + post.slug.current}
+                  key={post.slug.current}
+                  className="w-full"
+                >
+                  <h1 className="text-5xl text-crayola font-sans font-semibold">
+                    {post.title}
+                  </h1>
+                </Link>
                 <div className="w-full text-mintcream py-2">
                   {new Date(post.publishedAt).toLocaleString("default", {
                     month: "long",
@@ -96,9 +105,10 @@ export default function Post() {
                       } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
                       onClick={() => setNumBlogs((prevNum) => prevNum + 10)}
                     >
-                      Load +10 Blogs {console.log(numBlogs)}
+                      Load +10 Blogs
                     </button>
-                    <button
+                    <Link
+                      to={"/blog/archive/"}
                       className={`${
                         index % 2 === 0
                           ? "text-turquoise border-turquoise hover:bg-turquoise"
@@ -106,7 +116,7 @@ export default function Post() {
                       } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
                     >
                       Archive
-                    </button>
+                    </Link>
                   </div>
                 )}
               </article>
