@@ -82,31 +82,27 @@ export default function Post() {
               }
               position={"top-0"}
             />
-            {index === numBlogs && postData.length > numBlogs && (
-              <div className="flex flex-col gap-y-2">
-                <button
-                  className={`${
-                    index % 2 === 0
-                      ? "text-turquoise border-turquoise hover:bg-turquoise"
-                      : "text-gunmetal border-gunmetal hover:bg-gunmetal"
-                  } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
-                  onClick={() => setNumBlogs((prevNum) => prevNum + 1)}
-                >
-                  Load +1 Blog
-                </button>
-                <button
-                  className={`${
-                    index % 2 === 0
-                      ? "text-turquoise border-turquoise hover:bg-turquoise"
-                      : "text-gunmetal border-gunmetal hover:bg-gunmetal"
-                  } rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2`}
-                >
-                  Archive
-                </button>
-              </div>
-            )}
           </article>
         ))}
+      {numBlogs && (
+        <div className="bg-bittersweet w-full flex flex-col items-center p-2 gap-y-2">
+          <button
+            className={
+              "text-gunmetal border-gunmetal hover:bg-gunmetal rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2"
+            }
+            onClick={() => setNumBlogs((prevNum) => prevNum + 1)}
+          >
+            Load +10 Blogs
+          </button>
+          <button
+            className={
+              "text-gunmetal border-gunmetal hover:bg-gunmetal rounded-lg border-2  border-solid hover:text-mintcream w-40 text-center font-semibold p-2"
+            }
+          >
+            Archive
+          </button>
+        </div>
+      )}
       <BackgroundText
         text={"ЗДРАВО ВЛАТКО "}
         reps={1000}
