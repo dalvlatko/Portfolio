@@ -4,6 +4,7 @@ import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Project from "./components/Project";
 import Blog from "./components/Blog";
+import Archive from "./components/Archive";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />
         <Route component={Project} path="/project" />
-        <Route component={Blog} path="/blog" />
+        <Route component={Blog} path="/blog" exact />
         <Route component={SinglePost} path="/post/:slug" />
+        <Route component={Archive} path="/blog/archive" />
       </Switch>
     </BrowserRouter>
   );

@@ -8,7 +8,7 @@ import BackgroundText from "./BackgroundText";
 export default function Post() {
   const [postData, setPost] = useState(null);
   const { slug } = useParams();
-  const [numBlogs, setNumBlogs] = useState(4);
+  const [numBlogs, setNumBlogs] = useState(5);
 
   useEffect(() => {
     sanityClient
