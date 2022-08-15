@@ -8,7 +8,7 @@ import BackgroundText from "./BackgroundText";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
-  const [numBlogs, setNumBlogs] = useState(1);
+  const [numBlogs, setNumBlogs] = useState(5);
   const { slug } = useParams();
 
   useEffect(() => {

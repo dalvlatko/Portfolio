@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Months from "./Months";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Months from "../components/Months";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
