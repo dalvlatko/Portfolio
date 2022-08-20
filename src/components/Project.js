@@ -110,20 +110,22 @@ export default function Project() {
             </div>
             <div className="flex flex-col items-center justify-center space-y-10 w-96">
               {project.screenshot && (
-                <img
-                  src={project.screenshot.asset.url}
-                  alt={
-                    project.screenshot.alt ||
-                    `Screenshot of ${project.title} project | ${
-                      project.live_site || project.github
-                    }`
-                  }
-                  className={`border-solid border-turquoise border-b-[20px] ${
-                    index % 2 === 0
-                      ? "border-l-[20px]"
-                      : "border-r-[20px] border-gunmetal"
-                  }`}
-                />
+                <a href={project.screenshot.asset.url}>
+                  <img
+                    src={project.screenshot.asset.url}
+                    alt={
+                      project.screenshot.alt ||
+                      `Screenshot of ${project.title} project | ${
+                        project.live_site || project.github
+                      }`
+                    }
+                    className={`border-solid border-turquoise border-b-[20px] ${
+                      index % 2 === 0
+                        ? "border-l-[20px]"
+                        : "border-r-[20px] border-gunmetal"
+                    }`}
+                  />
+                </a>
               )}
               <div className="flex flex-wrap">
                 {project.tags &&

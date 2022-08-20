@@ -69,13 +69,15 @@ export default function Post() {
                   })}
                 </div>
                 {post.mainImage && (
-                  <img
-                    src={post.mainImage.asset.url}
-                    alt={post.mainImage.alt}
-                    className={`border-solid border-y-[6px] ${
-                      index % 2 === 0 ? "border-turquoise" : "border-gunmetal"
-                    }`}
-                  />
+                  <a href={post.mainImage.asset.url}>
+                    <img
+                      src={post.mainImage.asset.url}
+                      alt={post.mainImage.alt}
+                      className={`border-solid border-y-[6px] ${
+                        index % 2 === 0 ? "border-turquoise" : "border-gunmetal"
+                      }`}
+                    />
+                  </a>
                 )}
 
                 <div className="prose-xl w-full text-lg my-2 text-mintcream">

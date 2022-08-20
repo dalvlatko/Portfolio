@@ -53,11 +53,13 @@ export default function SingePost() {
         })}
       </div>
       {post.mainImage && (
-        <img
-          src={post.mainImage.asset.url}
-          alt={post.mainImage.alt}
-          className={"border-solid border-y-[6px] border-turquoise"}
-        />
+        <a href={post.mainImage.asset.url}>
+          <img
+            src={post.mainImage.asset.url}
+            alt={post.mainImage.alt}
+            className={"border-solid border-y-[6px] border-gunmetal"}
+          />
+        </a>
       )}
 
       <div className="prose-xl w-full text-lg my-2 text-mintcream">
