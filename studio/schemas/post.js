@@ -52,6 +52,10 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "cyrillic",
+      type: "string",
+    },
   ],
 
   preview: {

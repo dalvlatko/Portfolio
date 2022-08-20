@@ -23,7 +23,8 @@ export default function SingePost() {
             },
             alt
           },
-          body
+          body,
+          cyrillic
         }`
       )
       .then((data) => setPost(data[0]))

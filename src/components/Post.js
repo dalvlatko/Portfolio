@@ -25,7 +25,8 @@ export default function Post() {
             },
             alt
           },
-          body
+          body,
+          cyrillic
         }`
       )
       .then((data) => setPost(data))
