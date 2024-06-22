@@ -1,8 +1,17 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import logo from "../images/logo-nobg.png";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
+  let title = "Vlatko";
+  if (useLocation().pathname === "/blog") {
+    title = "Blog";
+  }
+  if (useLocation().pathname === "/projects") {
+    title = "Projects";
+  }
+  console.log(useLocation().pathname);
   return (
     <header className="flex flex-col items-center bg-bittersweet border-solid border-t-[6px] border-crayola overflow-hidden relative">
       <NavBar />
@@ -19,7 +28,7 @@ export default function Header() {
             </h2>
           </a>
         </div>
-        <div className="text-white text-5xl font-sans mt-12">Blog</div>
+        <div className="text-white text-5xl font-sans mt-12">{title}</div>
       </div>
     </header>
   );

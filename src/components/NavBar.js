@@ -18,12 +18,13 @@ export default function NavBar() {
       >
         About
       </a>
-      <a
-        href="#Projects"
+      <NavLink
+        to="/projects"
+        activeClassName="text-mintcream"
         className="font-extrabold inline-flex items-center py-6 px-3 xl:px-20 text-gunmetal hover:text-crayola"
       >
         Projects
-      </a>
+      </NavLink>
       <NavLink
         to="/blog"
         activeClassName="text-mintcream"

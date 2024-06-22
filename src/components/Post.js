@@ -98,7 +98,7 @@ export default function Post() {
                   }
                   position={"top-0"}
                 />
-                {index == numBlogs - 1 && postData.length > numBlogs && (
+                {index === numBlogs - 1 && postData.length > numBlogs && (
                   <div className="w-full flex flex-col items-center p-2 gap-y-2">
                     <button
                       className={`${
